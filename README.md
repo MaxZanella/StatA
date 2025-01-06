@@ -86,7 +86,7 @@ python3 main.py --root_path /path/to/datasets/folder --dataset imagenet --method
 
 To run the whole experiment of Table 1 in the paper, use the following command:
 ```bash
-bash ./scripts/stata_batch.sh /path/to/datasets/folder vit_b16
+bash ./scripts/StatA_batch.sh /path/to/datasets/folder vit_b16
 ```
 
 ## Online Adaptation
@@ -99,7 +99,7 @@ python3 main.py --root_path /path/to/datasets/folder --dataset imagenet --method
 
 To run the whole experiment of Table 1 in the paper, use the following command:
 ```bash
-bash ./scripts/stata_online.sh /path/to/datasets/folder vit_b16
+bash ./scripts/StatA_online.sh /path/to/datasets/folder vit_b16
 ```
 
 
