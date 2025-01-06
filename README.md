@@ -7,6 +7,8 @@ Authors:
 [Christophe De Vleeschouwer](https://scholar.google.ca/citations?user=xb3Zc3cAAAAJ&hl=en),
 [Ismail Ben Ayed](https://scholar.google.com/citations?user=29vyUccAAAAJ&hl=fr&oi=ao).
 
+We present StatA, a versatile unsupervised transductive method that could handle a wide range of deployment scenarios, including those with a variable number of effective classes at test time. Our approach incorporates a novel regularization term designe specifically for VLMs, which acts as a statistical anchor preserving the initial text-encoder knowledge, particularly in low-data regimes.
+The experiments of this paper are divided in two main parts: (1) Batch Adaptation, where test-time adaptation methods are applied on each batch independently and (2) Online Adaptation, where test-time adaptation methods are applied on streams of batch with the possibility of keeping information from one batch to the next one.
 
 ## Table of Contents
 
@@ -55,6 +57,9 @@ $DATA/
 |–– imagenet-rendition/
 ```
 
+## Batch Adaptation
+
+## Online Adaptation
 
 
 ## Citation
