@@ -10,11 +10,19 @@ Authors:
 We introduce **StatA**, a robust and versatile unsupervised transductive method designed to handle diverse deployment scenarios, including those involving a variable number of effective classes during testing. Our approach features a novel anchor-based regularization term specifically crafted for Vision-Language Models (VLMs). This term serves as a statistical anchor, preserving the initial knowledge of the text encoder, especially in low-data settings.
 
 The experiments presented in this paper are organized into two main categories:  
+
 1. **Batch Adaptation**: Test-time adaptation methods are applied independently to each batch with a varying number of effective classes.  
-   ![Batch Adaptation](summary_batch.png)
+   <p align="center">
+      <img src="summary_batch.png" alt="Batch Adaptation" width="500">
+   </p>
+   *Figure 1: Illustration of the Batch Adaptation process.*
 
 2. **Online Adaptation**: Test-time adaptation methods are applied to a continuous stream of batches with varying correlation in the appearance of each class.  
-   ![Online Adaptation](summary_online.png)
+   <p align="center">
+      <img src="summary_online.png" alt="Online Adaptation" width="500">
+   </p>
+   *Figure 2: Illustration of the Online Adaptation process.*
+
 
 
 
