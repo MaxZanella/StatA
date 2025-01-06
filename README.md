@@ -58,8 +58,30 @@ $DATA/
 ```
 
 ## Batch Adaptation
+We present the basic usage to get started with our method. You have to pass the datasets folder path.
+
+Here is an example for the imagenet dataset, with the CLIP-ViT-B/16 architecture, a batch size of 64, a variable number of effective classes between 1 and 4. This experiments is run 1000 times.
+```bash
+python3 main.py --root_path /path/to/datasets/folder --dataset imagenet --method StatA --backbone vit_b16 --batch_size 64 --num_class_eff_min 1 --num_class_eff_max 4 --n_tasks 1000
+```
+
+To run the whole experiment of Table 1 in the paper, use the following command:
+```bash
+bash ./scripts/stata_batch.sh /path/to/datasets/folder vit_b16
+```
 
 ## Online Adaptation
+We present the basic usage to get started with our method. You have to pass the datasets folder path.
+
+Here is an example for the imagenet dataset, with the CLIP-ViT-B/16 architecture, a batch size of 128, a stream correlation factor gamma of 0.1. This experiments is run 100 times.
+```bash
+python3 main.py --root_path /path/to/datasets/folder --dataset imagenet --method StatA --backbone vit_b16 --batch_size 64 --online --gamma 0.1 --n_tasks 100
+```
+
+To run the whole experiment of Table 1 in the paper, use the following command:
+```bash
+bash ./scripts/stata_online.sh /path/to/datasets/folder vit_b16
+```
 
 
 ## Citation
