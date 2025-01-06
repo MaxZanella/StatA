@@ -12,16 +12,17 @@ We introduce **StatA**, a robust and versatile unsupervised transductive method 
 The experiments presented in this paper are organized into two main categories:  
 
 1. **Batch Adaptation**: Test-time adaptation methods are applied independently to each batch with a varying number of effective classes.  
-   <p align="center">
+   <div align="center">
       <img src="summary_batch.png" alt="Batch Adaptation" width="500">
-   </p>
-   *Figure 1: Illustration of the Batch Adaptation process.*
+      <p><em>Figure 1: Illustration of the Batch Adaptation process.</em></p>
+   </div>
 
 2. **Online Adaptation**: Test-time adaptation methods are applied to a continuous stream of batches with varying correlation in the appearance of each class.  
-   <p align="center">
+   <div align="center">
       <img src="summary_online.png" alt="Online Adaptation" width="500">
-   </p>
-   *Figure 2: Illustration of the Online Adaptation process.*
+      <p><em>Figure 2: Illustration of the Online Adaptation process.</em></p>
+   </div>
+
 
 
 
