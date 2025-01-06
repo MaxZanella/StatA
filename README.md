@@ -14,14 +14,15 @@ The experiments presented in this paper are organized into two main categories:
 1. **Batch Adaptation**: Test-time adaptation methods are applied independently to each batch with a varying number of effective classes.  
    <div align="center">
       <img src="summary_batch.png" alt="Batch Adaptation" width="500">
-      <p><em>Figure 1: Illustration of the Batch Adaptation process.</em></p>
+      <p><em>Figure 1: StatA brings consistent improvement when facing Low (between 2 and 10), Medium (between 5 and 25) number of effective classes (Keff) in each batch, or All classes. In comparison, other transductive methods engender significant performance drops in at least one scenario.</em></p>
    </div>
 
 2. **Online Adaptation**: Test-time adaptation methods are applied to a continuous stream of batches with varying correlation in the appearance of each class.  
    <div align="center">
       <img src="summary_online.png" alt="Online Adaptation" width="500">
-      <p><em>Figure 2: Illustration of the Online Adaptation process.</em></p>
+      <p><em>Figure 2: StatA shows strong performance when applied on streams of data, with Low or High correlation between batches, and when all the classes are appearing sequentially (Separate).</em></p>
    </div>
+
 
 
 
