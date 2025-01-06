@@ -55,3 +55,29 @@ $DATA/
 |–– imagenet-rendition/
 ```
 
+
+
+## Citation
+
+If you find this repository useful, please consider citing our paper:
+```
+
+```
+
+You can also cite the TransCLIP paper on which this work is based on:
+```
+@article{zanella2024boosting,
+  title={Boosting Vision-Language Models with Transduction},
+  author={Zanella, Maxime and G{\'e}rin, Beno{\^\i}t and Ayed, Ismail Ben},
+  journal={arXiv preprint arXiv:2406.01837},
+  year={2024}
+}
+```
+
+## Contact
+
+For any inquiries, please contact us at [maxime.zanella@uclouvain.be](mailto:maxime.zanella@uclouvain.be) and [clement.fuchs@uclouvain.be](mailto:clement.fuchs@uclouvain.be) or feel free to [create an issue](https://github.com/MaxZanella/StatA/issues).
+
+
+## License
+[AGPL-3.0](https://github.com/MaxZanella/StatA/blob/main/LICENSE)
