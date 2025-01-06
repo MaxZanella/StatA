@@ -51,10 +51,6 @@ $DATA/
 |–– dtd/
 |–– eurosat/
 |–– ucf101/
-|–– imagenetv2/
-|–– imagenet-sketch/
-|–– imagenet-adversarial/
-|–– imagenet-rendition/
 ```
 
 ## Batch Adaptation
