@@ -165,7 +165,7 @@ We focus on four realistic configurations:
 | TENT             | 65.8 `↑0.6`     | 65.5 `↑0.2`           | 65.3 `↑0.1`          | 64.5 `↓0.7`           |
 | TDA             | **67.7** `↑2.5`     | <ins>67.1</ins> `↑1.9`           | <ins>66.8</ins> `↑1.6`          | <ins>66.6</ins> `↑1.4`           |
 | DMN             | <ins>67.2</ins> `↑2.0`         | 66.5 `↑1.2`             | 66.3 `↑1.0`            | 65.8 `↑0.6`             |
-| StatA$  | 67.0 `↑1.7`       | **68.9** `↑3.7`         | **69.5** `↑4.2`        | **69.1** `↑3.8`         |
+| **StatA**  | 67.0 `↑1.7`       | **68.9** `↑3.7`         | **69.5** `↑4.2`        | **69.1** `↑3.8`         |
 
 
 StatA demonstrates robustness across all scenarios, providing a strong baseline for future reasearch in the field.
