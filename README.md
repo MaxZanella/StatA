@@ -43,12 +43,6 @@ The experiments presented in this paper are organized into two main categories:
    </div>
 
 
-
-
-
-
-
-
 ## Table of Contents
 
 1. [Installation](#installation) 
@@ -90,6 +84,8 @@ $DATA/
 |–– eurosat/
 |–– ucf101/
 ```
+
+---
 
 ## Batch Adaptation
 We present the basic usage to get started with our method. Each batch is generated using a data sampler (see `sampler.py`) called **BatchSampler**. The **BatchSampler** dynamically samples a specified number of effective classes (i.e., the number of classes effecitvely present in each batch) and corresponding indices from the dataset.
@@ -135,6 +131,7 @@ Additionally, we provide the results on the full dataset, containing **All Class
 StatA demonstrates robustness across all scenarios, whereas other transductive methods exhibit strong performance only within specific, narrow application ranges.
 For more detailed results, please refer to **Table 1** in the paper.
 
+---
 
 ## Online Adaptation
 We present the basic usage to get started with our method. Each batch is generated using a data sampler (see `sampler.py`) called **OnlineSampler**. The **OnlineSampler** dynamically samples indices from the dataset according to a Dirichlet law parametrized by gamma (see Appendix of the paper for more details).
@@ -173,6 +170,7 @@ We focus on four realistic configurations:
 StatA demonstrates robustness across all scenarios, providing a strong baseline for future reasearch in the field.
 For more detailed results, please refer to **Table 2** in the paper.
 
+---
 
 ## Citation
 
@@ -199,3 +197,6 @@ For any inquiries, please contact us at [maxime.zanella@uclouvain.be](mailto:max
 
 ## License
 [AGPL-3.0](https://github.com/MaxZanella/StatA/blob/main/LICENSE)
+
+## Acknowledgment
+This repository is mainly based on [CLIP](https://github.com/openai/CLIP) and [TransCLIP](https://github.com/MaxZanella/transduction-for-vlms). 
