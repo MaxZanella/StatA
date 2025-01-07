@@ -116,12 +116,10 @@ For a larger batch size of **1000**, we examine:
 Additionally, we provide the results on the full dataset, containing **All Classes**.
 
 
-|     | Very Low <br> (1-4)    | Low <br> (2-10)     | Medium <br> (5-25)  | Medium <br> (5-25)  | High <br> (25-50)  | Very High <br> (50-100)  | All <br> Classes |
+|     | Very Low <br> (B=64)    | Low <br> (B=64)     | Medium <br> (B=64)  | Medium <br> (B=1000)  | High <br> (B=1000)  | Very High <br> (B=1000)  | All Classes <br> (All dataset) |
 |----------------|----------------|-----------------|--------------------|--------------------|------------------|---------------------|----------------|
-| Batch Size     | **64**         | **64**          | **64**            | **1000**           | **1000**         | **1000**           | **All**         |
 | CLIP       | 65.2           | 65.2            | 65.2              | 65.2               | 65.2             | 65.2               | 65.2           |
-|                | —              | —               | —                 | —                  | —                | —                  | —              |
-| MTA        | 66.6 ✅ <br> `↑1.4` | 66.6 ✅ <br> `↑1.4` | 66.6 ✅ <br> `↑1.4` | 66.6 ✅ <br> `↑1.4` | 66.6 ✅ <br> `↑1.4` | 66.6 ✅ <br> `↑1.4` | 66.6 ✅ <br> `↑1.4` |
+| MTA        | 66.6  <br> `↑1.4` | 66.6  <br> `↑1.4` | 66.6  <br> `↑1.4` | 66.6  <br> `↑1.4` | 66.6  <br> `↑1.4` | 66.6  <br> `↑1.4` | 66.6  <br> `↑1.4` |
 | Dirichlet | <ins>68.5</ins> ✅ <br> `↑3.3` | **70.3** ✅ <br> `↑5.1` | **67.5** ✅ <br> `↑2.2` | <ins>64.4</ins> ❌ <br> `↓0.8` | 45.3 ❌ <br> `↓20.0` | 33.6 ❌ <br> `↓31.6` | 29.5 ❌ <br> `↓35.7` |
 | ZLaP       | 27.5 ❌ <br> `↓37.7` | 35.2 ❌ <br> `↓30.0` | 44.7 ❌ <br> `↓20.6` | 41.5 ❌ <br> `↓23.7` | 52.2 ❌ <br> `↓13.0` | 58.4 ❌ <br> `↓6.8` | 66.4 ✅ <br> `↑1.1` |
 | TransCLIP  | 38.9 ❌ <br> `↓26.3` | 40.4 ❌ <br> `↓24.8` | 42.7 ❌ <br> `↓22.5` | 56.5 ❌ <br> `↓8.7` | <ins>62.0</ins> ❌ <br> `↓3.3` | <ins>64.4</ins> ❌ <br> `↓0.8` | **70.3** ✅ <br> `↑5.1` |
@@ -129,7 +127,7 @@ Additionally, we provide the results on the full dataset, containing **All Class
 
 
 
-
+- **B** indicates the batch size 
 - ✅ (Green): Indicates a performance gain compared to the zero-shot baseline (CLIP).
 - ❌ (Red): Indicates a performance deterioration compared to the zero-shot baseline (CLIP).
 
