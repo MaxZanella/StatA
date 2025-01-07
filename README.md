@@ -117,14 +117,14 @@ Additionally, we provide the results on the full dataset, containing **All Class
 
 
 
-|     | Very Low <br> (1-4) | Low <br> (2-10) | Medium <br> (5-25) | Medium <br> (5-25) | High <br> (25-50) | Very High <br> (50-100) | All Classes    |
+|     | Very Low <br> (1-4) | Low <br> (2-10) | Medium <br> (5-25) | Medium <br> (5-25) | High <br> (25-50) | Very High <br> (50-100) | All <br> Classes    |
 |----------------|----------------|-------------|---------------------|-----------------------|--------------|---------------------|----------------|
-| **Batch Size** | **64**         | **64**      | **64**             | **1000**              | **1000**     | **1000**           | **All Dataset** |
-| **CLIP**       | 65.2           | 65.2        | 65.2               | 65.2                  | 65.2         | 65.2               | 65.2           |
-| **MTA**        | 66.6 `↑1.4` | 66.6 `↑1.4` | 66.6`↑1.4` | 66.6 `↑1.4` | 66.6 `↑1.4` | 66.6 `↑1.4` | 66.6 `↑1.4` |
-| **Dirichlet**  | <ins>68.5</ins>&nbsp;`↑3.3`&nbsp;✅ | **70.3**&nbsp;`↑5.1`&nbsp;✅ | **67.5**&nbsp;`↑2.2`&nbsp;✅ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | 45.3&nbsp;`↓20.0`&nbsp;❌ | 33.6&nbsp;`↓31.6`&nbsp;❌ | 29.5&nbsp;`↓35.7`&nbsp;❌ |
-| **ZLaP**       | 27.5&nbsp;`↓37.7`&nbsp;❌ | 35.2&nbsp;`↓30.0`&nbsp;❌ | 44.7&nbsp;`↓20.6`&nbsp;❌ | 41.5&nbsp;`↓23.7`&nbsp;❌ | 52.2&nbsp;`↓13.0`&nbsp;❌ | 58.4&nbsp;`↓6.8`&nbsp;❌ | 66.4&nbsp;`↑1.1`&nbsp;✅ |
-| **TransCLIP**  | 38.9&nbsp;`↓26.3`&nbsp;❌ | 40.4&nbsp;`↓24.8`&nbsp;❌ | 42.7&nbsp;`↓22.5`&nbsp;❌ | 56.5&nbsp;`↓8.7`&nbsp;❌ | <ins>62.0</ins>&nbsp;`↓3.3`&nbsp;❌ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | **70.3**&nbsp;`↑5.1`&nbsp;✅ |
+| Batch Size | **64**         | **64**      | **64**             | **1000**              | **1000**     | **1000**           | **All** |
+| CLIP       | 65.2           | 65.2        | 65.2               | 65.2                  | 65.2         | 65.2               | 65.2           |
+| MTA        | 66.6 `↑1.4` | 66.6 `↑1.4` | 66.6`↑1.4` | 66.6 `↑1.4` | 66.6 `↑1.4` | 66.6 `↑1.4` | 66.6 `↑1.4` |
+| Dirichlet  | <ins>68.5</ins>&nbsp;`↑3.3`&nbsp;✅ | **70.3**&nbsp;`↑5.1`&nbsp;✅ | **67.5**&nbsp;`↑2.2`&nbsp;✅ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | 45.3&nbsp;`↓20.0`&nbsp;❌ | 33.6&nbsp;`↓31.6`&nbsp;❌ | 29.5&nbsp;`↓35.7`&nbsp;❌ |
+| ZLaP       | 27.5&nbsp;`↓37.7`&nbsp;❌ | 35.2&nbsp;`↓30.0`&nbsp;❌ | 44.7&nbsp;`↓20.6`&nbsp;❌ | 41.5&nbsp;`↓23.7`&nbsp;❌ | 52.2&nbsp;`↓13.0`&nbsp;❌ | 58.4&nbsp;`↓6.8`&nbsp;❌ | 66.4&nbsp;`↑1.1`&nbsp;✅ |
+| TransCLIP  | 38.9&nbsp;`↓26.3`&nbsp;❌ | 40.4&nbsp;`↓24.8`&nbsp;❌ | 42.7&nbsp;`↓22.5`&nbsp;❌ | 56.5&nbsp;`↓8.7`&nbsp;❌ | <ins>62.0</ins>&nbsp;`↓3.3`&nbsp;❌ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | **70.3**&nbsp;`↑5.1`&nbsp;✅ |
 | **StatA**      | **70.4**&nbsp;`↑5.1`&nbsp;✅ | <ins>69.3</ins>&nbsp;`↑4.1`&nbsp;✅ | <ins>67.4</ins>&nbsp;`↑2.2`&nbsp;✅ | **69.7**&nbsp;`↑4.4`&nbsp;✅ | **69.8**&nbsp;`↑4.5`&nbsp;✅ | **69.0**&nbsp;`↑3.7`&nbsp;✅ | <ins>69.9</ins>&nbsp;`↑4.7`&nbsp;✅ |
 
 
