@@ -127,7 +127,8 @@ Additionally, we provide the results on the full dataset, containing **All Class
 | TransCLIP  | 38.9&nbsp;`↓26.3`&nbsp;❌ | 40.4&nbsp;`↓24.8`&nbsp;❌ | 42.7&nbsp;`↓22.5`&nbsp;❌ | 56.5&nbsp;`↓8.7`&nbsp;❌ | <ins>62.0</ins>&nbsp;`↓3.3`&nbsp;❌ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | **70.3**&nbsp;`↑5.1`&nbsp;✅ |
 | **StatA (ours)**      | **70.4**&nbsp;`↑5.1`&nbsp;✅ | <ins>69.3</ins>&nbsp;`↑4.1`&nbsp;✅ | <ins>67.4</ins>&nbsp;`↑2.2`&nbsp;✅ | **69.7**&nbsp;`↑4.4`&nbsp;✅ | **69.8**&nbsp;`↑4.5`&nbsp;✅ | **69.0**&nbsp;`↑3.7`&nbsp;✅ | <ins>69.9</ins>&nbsp;`↑4.7`&nbsp;✅ |
 
-
+- ✅ (Green): Indicates a performance gain compared to the zero-shot baseline (CLIP).
+- ❌ (Red): Indicates a performance deterioration compared to the zero-shot baseline (CLIP).
 
 StatA demonstrates robustness across all scenarios, whereas other transductive methods exhibit strong performance only within specific, narrow application ranges.
 For more detailed results, please refer to **Table 1** in the paper.
