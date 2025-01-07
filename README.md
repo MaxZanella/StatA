@@ -52,11 +52,10 @@ The experiments presented in this paper are organized into two main categories:
 ## Table of Contents
 
 1. [Installation](#installation) 
-2. [Usage](#usage)
-3. [Batch adaptation](#batch-adaptation)
-4. [Online adaptation](#online-adaptation)
-5. [Citation](#citation)
-6. [Contact](#contact) 
+2. [Batch adaptation](#batch-adaptation)
+3. [Online adaptation](#online-adaptation)
+4. [Citation](#citation)
+5. [Contact](#contact) 
 
 
 ---
