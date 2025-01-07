@@ -125,7 +125,7 @@ Additionally, we provide the results on the full dataset, containing **All Class
 | Dirichlet  | <ins>68.5</ins>&nbsp;`↑3.3`&nbsp;✅ | **70.3**&nbsp;`↑5.1`&nbsp;✅ | **67.5**&nbsp;`↑2.2`&nbsp;✅ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | 45.3&nbsp;`↓20.0`&nbsp;❌ | 33.6&nbsp;`↓31.6`&nbsp;❌ | 29.5&nbsp;`↓35.7`&nbsp;❌ |
 | ZLaP       | 27.5&nbsp;`↓37.7`&nbsp;❌ | 35.2&nbsp;`↓30.0`&nbsp;❌ | 44.7&nbsp;`↓20.6`&nbsp;❌ | 41.5&nbsp;`↓23.7`&nbsp;❌ | 52.2&nbsp;`↓13.0`&nbsp;❌ | 58.4&nbsp;`↓6.8`&nbsp;❌ | 66.4&nbsp;`↑1.1`&nbsp;✅ |
 | TransCLIP  | 38.9&nbsp;`↓26.3`&nbsp;❌ | 40.4&nbsp;`↓24.8`&nbsp;❌ | 42.7&nbsp;`↓22.5`&nbsp;❌ | 56.5&nbsp;`↓8.7`&nbsp;❌ | <ins>62.0</ins>&nbsp;`↓3.3`&nbsp;❌ | <ins>64.4</ins>&nbsp;`↓0.8`&nbsp;❌ | **70.3**&nbsp;`↑5.1`&nbsp;✅ |
-| **StatA**      | **70.4**&nbsp;`↑5.1`&nbsp;✅ | <ins>69.3</ins>&nbsp;`↑4.1`&nbsp;✅ | <ins>67.4</ins>&nbsp;`↑2.2`&nbsp;✅ | **69.7**&nbsp;`↑4.4`&nbsp;✅ | **69.8**&nbsp;`↑4.5`&nbsp;✅ | **69.0**&nbsp;`↑3.7`&nbsp;✅ | <ins>69.9</ins>&nbsp;`↑4.7`&nbsp;✅ |
+| **StatA (ours)**      | **70.4**&nbsp;`↑5.1`&nbsp;✅ | <ins>69.3</ins>&nbsp;`↑4.1`&nbsp;✅ | <ins>67.4</ins>&nbsp;`↑2.2`&nbsp;✅ | **69.7**&nbsp;`↑4.4`&nbsp;✅ | **69.8**&nbsp;`↑4.5`&nbsp;✅ | **69.0**&nbsp;`↑3.7`&nbsp;✅ | <ins>69.9</ins>&nbsp;`↑4.7`&nbsp;✅ |
 
 
 
@@ -165,7 +165,7 @@ We focus on four realistic configurations:
 | TENT             | 65.8 `↑0.6`     | 65.5 `↑0.2`           | 65.3 `↑0.1`          | 64.5 `↓0.7`           |
 | TDA             | **67.7** `↑2.5`     | <ins>67.1</ins> `↑1.9`           | <ins>66.8</ins> `↑1.6`          | <ins>66.6</ins> `↑1.4`           |
 | DMN             | <ins>67.2</ins> `↑2.0`         | 66.5 `↑1.2`             | 66.3 `↑1.0`            | 65.8 `↑0.6`             |
-| **StatA**  | 67.0 `↑1.7`       | **68.9** `↑3.7`         | **69.5** `↑4.2`        | **69.1** `↑3.8`         |
+| **StatA (ours)**  | 67.0 `↑1.7`       | **68.9** `↑3.7`         | **69.5** `↑4.2`        | **69.1** `↑3.8`         |
 
 
 StatA demonstrates robustness across all scenarios, providing a strong baseline for future reasearch in the field.
