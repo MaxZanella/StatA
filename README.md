@@ -17,12 +17,12 @@ The experiments presented in this paper are organized into two main categories:
 1. **Batch Adaptation: Test-time adaptation methods are applied independently to each batch with a varying number of effective classes.**
 
    <div align="center" style="margin-top:20px; margin-bottom:20px;">
-      <img src="realistic_batch.png" alt="Realistic Scenarios" width="500">
+      <img src="images/realistic_batch.png" alt="Realistic Scenarios" width="500">
       <p style="font-size:75%;"><em>Realistic batches may not contain all the classes of interest.</em></p>
    </div>
 
    <div align="center" style="margin-top:20px; margin-bottom:20px;">
-      <img src="summary_batch.png" alt="Batch Adaptation" width="500">
+      <img src="images/summary_batch.png" alt="Batch Adaptation" width="500">
       <p style="font-size:75%;"><em>StatA brings consistent improvement when facing Low (between 2 and 10), Medium (between 5 and 25) number of effective classes (Keff) in each batch, or All classes. In comparison, other transductive methods engender significant performance drops in at least one scenario.</em></p>
    </div>
 
@@ -33,12 +33,12 @@ The experiments presented in this paper are organized into two main categories:
 2. **Online Adaptation: Test-time adaptation methods are applied to a continuous stream of batches with varying correlation in the appearance of each class.**  
 
    <div align="center" style="margin-top:20px; margin-bottom:20px;">
-      <img src="realistic_online.png" alt="Realistic Online Scenarios" width="500">
+      <img src="images/realistic_online.png" alt="Realistic Online Scenarios" width="500">
       <p style="font-size:75%;"><em>Realistic data streams contain correlated frames.</em></p>
    </div>
 
    <div align="center" style="margin-top:20px; margin-bottom:20px;">
-      <img src="summary_online.png" alt="Online Adaptation" width="500">
+      <img src="images/summary_online.png" alt="Online Adaptation" width="500">
       <p style="font-size:75%;"><em>StatA shows strong performance when applied on streams of data, with Low or High correlation between batches, and when all the classes are appearing sequentially (Separate).</em></p>
    </div>
 
