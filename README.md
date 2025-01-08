@@ -183,7 +183,11 @@ For more detailed results, please refer to **Table 2** in the paper.
 
 If you find this repository useful, please consider citing our paper:
 ```
-@article{
+@article{zanella2025realistic,
+title={Realistic Test-Time Adaptation of Vision-Language Models},
+author={Zanella, Maxime and Fuchs, Cl{\'e}ment and De Vleeschouwer, Christophe and Ben Ayed, Ismail}
+journal={arXiv preprint arXiv:2501.03729},
+  year={2025}
 }
 ```
 
@@ -191,7 +195,7 @@ You can also cite the TransCLIP paper on which this work is based on:
 ```
 @article{zanella2024boosting,
   title={Boosting Vision-Language Models with Transduction},
-  author={Zanella, Maxime and G{\'e}rin, Beno{\^\i}t and Ayed, Ismail Ben},
+  author={Zanella, Maxime and G{\'e}rin, Beno{\^\i}t and Ben Ayed, Ismail},
   journal={arXiv preprint arXiv:2406.01837},
   year={2024}
 }
