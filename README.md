@@ -1,5 +1,5 @@
 # Realistic Test-Time Adaptation of Vision-Language Models (StatA)
-The official implementation of [*Realistic Test-Time Adaptation of Vision-Language Models*]().
+The official implementation of [*Realistic Test-Time Adaptation of Vision-Language Models*](https://arxiv.org/abs/2501.03729).
 
 Authors:
 [Maxime Zanella*](https://scholar.google.com/citations?user=FIoE9YIAAAAJ&hl=fr&oi=ao),
