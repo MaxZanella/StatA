@@ -7,7 +7,8 @@ from datasets import get_all_dataloaders
 from utils import *
 from sampler import BatchSampler, OnlineSampler
 from tqdm import tqdm
-from solvers import TransCLIP_solver, StatA_solver #, TransCLIP_solver, Dirichlet_solver, ZLaP_solver, TDA_solver, DMN_solver
+from solvers import TransCLIP_solver, StatA_solver, Dirichlet_solver, ZLaP_solver #, TDA_solver, DMN_solver
+
 def get_arguments():
     
     parser = argparse.ArgumentParser()
@@ -15,7 +16,7 @@ def get_arguments():
     # General arguments
     parser.add_argument('--dataset', default='dtd', help='dataset name', type=str)
     parser.add_argument('--root_path', default='./datasets', type=str)
-    parser.add_argument('--method', default='StatA', type=str, choices=['StatA', 'TransCLIP'])
+    parser.add_argument('--method', default='StatA', type=str, choices=['StatA', 'TransCLIP', 'Dirichlet', 'ZLaP'])
     parser.add_argument('--seed', default=1, type=int)
     parser.add_argument('--backbone', default='vit_b16', type=str, choices=['rn50', 'rn101', 'vit_b32', 'vit_b16', 'vit_l14'], help="CLIP architecture")
     parser.add_argument('--cache_dir', type = str, default = None, help='where to store visual and textual features if not None')
@@ -49,6 +50,10 @@ def get_hp(args, method_name):
         }
     elif method_name == 'TransCLIP':
         return TransCLIP_solver, {'lambda_y_hat':1, 'lambda_laplacian': 1, 'n_neighbors':3}
+    elif method_name == 'Dirichlet':
+        return Dirichlet_solver, {'T':30}
+    elif method_name == 'ZLaP':
+        return ZLaP_solver, {'k':5, 'gamma':5.0, 'alpha':0.3, 'scale_sim':False}
     else:
         raise NotImplementedError(f"Method {method_name} is not implemented.")
 
