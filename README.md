@@ -196,9 +196,11 @@ journal={arXiv preprint arXiv:2501.03729},
 You can also cite the TransCLIP paper on which this work is based on:
 ```
 @article{zanella2024boosting,
-  title={Boosting Vision-Language Models with Transduction},
+  title={Boosting vision-language models with transduction},
   author={Zanella, Maxime and G{\'e}rin, Beno{\^\i}t and Ben Ayed, Ismail},
-  journal={arXiv preprint arXiv:2406.01837},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={62223--62256},
   year={2024}
 }
 ```
