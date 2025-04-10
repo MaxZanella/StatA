@@ -1,4 +1,4 @@
-# Realistic Test-Time Adaptation of Vision-Language Models (StatA) [CVPR 2025]
+# Realistic Test-Time Adaptation of Vision-Language Models (StatA) [CVPR 2025 - Highlight]
 
 <a href="https://arxiv.org/abs/2501.03729" style="vertical-align:middle; display:inline;">
     <img src="https://img.shields.io/badge/cs.CV-arXiv%3A2501.03729-B31B1B.svg" class="plain" style="height:25px;" />
