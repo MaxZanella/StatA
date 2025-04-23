@@ -16,7 +16,7 @@ def get_arguments():
     # General arguments
     parser.add_argument('--dataset', default='dtd', help='dataset name', type=str)
     parser.add_argument('--root_path', default='./datasets', type=str)
-    parser.add_argument('--method', default='StatA', type=str, choices=['StatA', 'TransCLIP', 'Dirichlet', 'ZLaP'])
+    parser.add_argument('--method', default='StatA', type=str, choices=['StatA', 'TransCLIP', 'Dirichlet', 'ZLaP', 'TDA'])
     parser.add_argument('--seed', default=1, type=int)
     parser.add_argument('--backbone', default='vit_b16', type=str, choices=['rn50', 'rn101', 'vit_b32', 'vit_b16', 'vit_l14'], help="CLIP architecture")
     parser.add_argument('--cache_dir', type = str, default = None, help='where to store visual and textual features if not None')
@@ -54,6 +54,12 @@ def get_hp(args, method_name):
         return Dirichlet_solver, {'T':30}
     elif method_name == 'ZLaP':
         return ZLaP_solver, {'k':5, 'gamma':5.0, 'alpha':0.3, 'scale_sim':False}
+    elif method_name == 'TDA':
+        from solvers import TDA_solver
+        # For TDA, we need to know the number of classes to instantiate
+        # so the solver is instantiated later in the function main()
+        # We use default parameters from TDA's paper
+        return TDA_solver, {} 
     else:
         raise NotImplementedError(f"Method {method_name} is not implemented.")
 
@@ -129,8 +135,14 @@ def main():
     ###############################
 
     if args.online:
-   
+        if args.method == 'TDA':
+            K = torch.max(test_labels)+1
+            d = test_features.shape[1]
+            from solvers import TDA_solver#, run_test_tda, compute_tda_logits
+            
         for i in tqdm(range(args.n_tasks)):
+            if args.method == 'TDA':
+                solver = TDA_solver(K, d) # reinstantiate solver with empty cache
             
             num_batch = test_features.shape[0]//args.batch_size
             num_slots = min(num_batch, len(torch.unique(test_labels)))
@@ -178,6 +190,7 @@ def main():
     print(f"ZERO-shot Accuracy: {acc_zs_tot:.4f}")
     print(f"FINAL Accuracy:     {acc_tot:.4f}")
     print("============================\n")
+
 
 
 if __name__ == '__main__':
