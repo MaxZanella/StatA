@@ -111,7 +111,7 @@ def main():
             indices = sampler.generate_indices()
             if indices == None:
                 break
-    
+            
             preds_zs, preds = solver(test_features[indices,:], test_labels[indices], clip_prototypes, # visual and textual features  
                                               **method_args)
             

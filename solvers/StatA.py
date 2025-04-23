@@ -64,11 +64,15 @@ class Gaussian(nn.Module):
 
 
 
-def update_z(likelihoods, y_hat, z, W, lambda_y_hat, lambda_laplacian, n_neighbors, max_iter=5):
+def update_z(likelihoods, y_hat, z, W, lambda_y_hat, lambda_laplacian, n_neighbors, sigma, max_iter=5):
     for it in range(max_iter):
         intermediate = likelihoods.clone()
         intermediate += lambda_laplacian*(50 / (n_neighbors * 2)) * (
                 W.T @ z + (W @ z))
+        
+        sigma_log_sum = sigma.log().sum(dim=1)
+        intermediate -= 0.5 * sigma_log_sum.unsqueeze(0)
+        
         # For numerical stability
         intermediate -= torch.max(intermediate, dim=1, keepdim=True)[0]
         intermediate = (y_hat ** lambda_y_hat) * torch.exp(1 / 50 * intermediate)
@@ -106,7 +110,7 @@ def update_cov(adapter, query_features, z, beta, init_prototypes, init_covarianc
             cov += weighted_sum  # Accumulate per-class contributions
 
     cov /= z.sum(dim=0)[:, None]  
-        
+    
     # Compute delta_mu
     delta_mu = (init_prototypes - adapter.mu).squeeze()  # Shape: [num_classes, num_features]
     result = torch.bmm(delta_mu.unsqueeze(2), delta_mu.unsqueeze(1))  # Shape: [num_classes, num_features, num_features]
@@ -114,7 +118,7 @@ def update_cov(adapter, query_features, z, beta, init_prototypes, init_covarianc
     
     # Final update to std
     cov = beta.unsqueeze(-1) * cov + (1 - beta).unsqueeze(-1) * (init_covariance + diagonal_result)
- 
+    
     return cov
 
 
@@ -202,7 +206,7 @@ def StatA_solver(query_features, query_labels, clip_prototypes, alpha=1, soft_be
         # Z update #
         ############
 
-        z = update_z(likelihoods, y_hat, z, W, lambda_y_hat, lambda_laplacian, n_neighbors)
+        z = update_z(likelihoods, y_hat, z, W, lambda_y_hat, lambda_laplacian, n_neighbors, adapter.cov)
         
         if k == max_iter:  # STOP
             break

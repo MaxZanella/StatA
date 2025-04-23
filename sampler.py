@@ -16,11 +16,11 @@ class BatchSampler:
             self.label_dict[label.item()].append(i)
 
         self.num_class = len(self.classes)
-        self.num_class_eff = num_class_eff if num_class_eff else self.num_class
+
         self.num_class_eff_min = num_class_eff_min
         self.num_class_eff_max = num_class_eff_max
         self.max_samples_per_class = [len(self.label_dict[label]) for label in self.classes]
-
+        self.num_class_eff = num_class_eff if num_class_eff_min is None and num_class_eff is not None else self.num_class if num_class_eff_min is None else None
         self.online = online
         self.remaining_indices_per_class = None
 
@@ -46,6 +46,7 @@ class BatchSampler:
         # Offline setting: select classes first
         if num_class_eff > 0 and num_class_eff < self.num_class:
             selected_classes = np.random.choice(self.classes, num_class_eff, replace=False)
+            
         else:
             selected_classes = self.classes
 
